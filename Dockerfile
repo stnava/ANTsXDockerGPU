@@ -3,7 +3,7 @@ FROM rocker/ml:4.0.0-cuda10.2-ubuntu18.04
 USER root
 COPY . ${HOME}
 COPY --chown=rstudio:rstudio . ${HOME}
-RUN chown -R ${NB_USER} ${HOME}
+# RUN chown -R ${NB_USER} ${HOME}
 
 
 COPY . /usr/local/src/scripts
@@ -101,4 +101,4 @@ RUN git clone https://stnava@bitbucket.org/stnava/superblendr.git  && R CMD INST
 RUN chmod a+rwx *
 RUN chmod a+rwx .
 ## Become normal user again
-USER ${NB_USER}
+USER ${USER}
