@@ -1,6 +1,8 @@
 An attempt at making a portable ANTsR docker app, with some
 visualization capabilities via RStudio.
 
+FIXME: probably needs a --gpu parameter
+
 ```
 docker build --build-arg WHEN=2019-05-01 -t  antsr .
 ```
