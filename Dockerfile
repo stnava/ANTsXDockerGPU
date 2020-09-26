@@ -1,4 +1,4 @@
-FROM rocker/binder:3.6.0
+FROM rocker/ml:4.0.0-cuda10.2-ubuntu18.04
 
 USER root
 COPY . ${HOME}
@@ -89,12 +89,12 @@ RUN Rscript -e 'remotes::install_github( \
         ref = "1d6f8483b1bbf38c87d15995f1e3e3febe806440")'
 
 
-RUN wget https://github.com/stnava/ITKR/releases/download/v0.5.3.2.0/ITKR_0.5.3.2.0_R_x86_64-pc-linux-gnu_R3.6.tar.gz
-RUN wget https://github.com/ANTsX/ANTsRCore/releases/download/v0.7.4.8/ANTsRCore_0.7.4.8_R_x86_64-pc-linux-gnu_R3.6.tar.gz
-RUN wget https://github.com/ANTsX/ANTsR/releases/download/v0.5.6.5/ANTsR_0.5.6.5_R_x86_64-pc-linux-gnu_R3.6.tar.gz
-RUN R CMD INSTALL ITKR_0.5.3.2.0_R_x86_64-pc-linux-gnu_R3.6.tar.gz
-RUN R CMD INSTALL ANTsRCore_0.7.4.8_R_x86_64-pc-linux-gnu_R3.6.tar.gz
-RUN R CMD INSTALL ANTsR_0.5.6.5_R_x86_64-pc-linux-gnu_R3.6.tar.gz
+RUN wget https://github.com/stnava/ITKR/releases/download/v0.5.3.2.0/ITKR_0.5.3.2.0_R_x86_64-pc-linux-gnu_R4.0.tar.gz
+RUN wget https://github.com/ANTsX/ANTsRCore/releases/download/v0.7.4.8/ANTsRCore_0.7.4.8_R_x86_64-pc-linux-gnu_R4.0.tar.gz
+RUN wget https://github.com/ANTsX/ANTsR/releases/download/v0.5.6.5/ANTsR_0.5.6.5_R_x86_64-pc-linux-gnu_R4.0.tar.gz
+RUN R CMD INSTALL ITKR_0.5.3.2.0_R_x86_64-pc-linux-gnu_R4.0.tar.gz
+RUN R CMD INSTALL ANTsRCore_0.7.4.8_R_x86_64-pc-linux-gnu_R4.0.tar.gz
+RUN R CMD INSTALL ANTsR_0.5.6.5_R_x86_64-pc-linux-gnu_R4.0.tar.gz
 RUN git clone https://github.com/ANTsX/ANTsRNet.git && R CMD INSTALL ANTsRNet
 RUN git clone https://github.com/stnava/patchMatchR.git && R CMD INSTALL patchMatchR
 RUN git clone https://stnava@bitbucket.org/stnava/superblendr.git  && R CMD INSTALL superblendr
