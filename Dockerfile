@@ -69,24 +69,15 @@ RUN Rscript -e 'remotes::install_version("BGLR")' \
     && Rscript -e 'remotes::install_version("viridis" )' \
     && Rscript -e 'remotes::install_version("visreg" )'
 
-RUN Rscript -e 'remotes::install_bioc("mixOmics")'
-RUN Rscript -e 'remotes::install_bioc("survcomp")'
+# RUN Rscript -e 'remotes::install_bioc("mixOmics")'
+# RUN Rscript -e 'remotes::install_bioc("survcomp")'
 
 RUN Rscript -e 'remotes::install_github( \
         "cran/SpatioTemporal", \
         ref = "3149f4a6ba0359d5b9c1a8fd599ce1bcdb855b1b")' \
     && Rscript -e 'remotes::install_github( \
-        "cran/r.jive", \
-        ref = "c698dbf8c0971e4e09d38e53a4c3678301799a55")' \
-    && Rscript -e 'remotes::install_github( \
         "egenn/rtemis", \
-        ref = "7e8fe410eb4562dc0915550ffd8f4128d2835d64")' \
-    && Rscript -e 'remotes::install_github( \
-        "neurodata/lol", \
-        ref = "e4d7ad2e8f2173e0004283c7feb3779170076f2b")' \
-    && Rscript -e 'remotes::install_github( \
-        "stnava/gliomaData", \
-        ref = "1d6f8483b1bbf38c87d15995f1e3e3febe806440")'
+        ref = "7e8fe410eb4562dc0915550ffd8f4128d2835d64")'
 
 
 RUN wget https://github.com/stnava/ITKR/releases/download/v0.5.3.2.0/ITKR_0.5.3.2.0_R_x86_64-pc-linux-gnu_R4.0.tar.gz
