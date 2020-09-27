@@ -50,6 +50,7 @@ RUN Rscript -e 'remotes::install_version("BGLR")' \
     && Rscript -e 'remotes::install_version("misc3d" )' \
     && Rscript -e 'remotes::install_version("mnormt" )' \
     && Rscript -e 'remotes::install_version("moments" )' \
+    && Rscript -e 'remotes::install_version("mvtnorm" )' \
     && Rscript -e 'remotes::install_version("nabor" )' \
     && Rscript -e 'remotes::install_version("pander" )' \
     && Rscript -e 'remotes::install_version("pbapply" )' \
