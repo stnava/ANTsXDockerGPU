@@ -24,7 +24,7 @@ RUN Rscript -e 'remotes::install_version("BGLR")' \
     && Rscript -e 'remotes::install_version("FNN")' \
     && Rscript -e 'remotes::install_version("RANN")' \
     && Rscript -e 'remotes::install_version("RGCCA")' \
-    && Rscript -e 'remotes::install_version("Rcpp")' \
+    && Rscript -e 'remotes::install_version("Rcpp",type='source')' \
     && Rscript -e 'remotes::install_version("RcppEigen" )' \
     && Rscript -e 'remotes::install_version("RcppHNSW" )' \
     && Rscript -e 'remotes::install_version("abind" )' \
