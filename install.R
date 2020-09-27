@@ -1,5 +1,5 @@
 install.packages(
-  c(
+  c("Rcpp",
     "remotes",
     "R6",
     "reticulate",
