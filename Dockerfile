@@ -16,7 +16,7 @@ RUN apt-get update; \
     apt-get -y upgrade
 RUN apt-get -y install cmake curl
 RUN apt-get install -y python3 python3-pip
-# RUN sudo -H pip3 install setuptools virtualenv keras tensorflow antspyx
+RUN sudo -H pip3 install setuptools virtualenv keras tensorflow antspyx
 ## Run an install.R script, if it exists.
 RUN if [ -f install.R ]; then R --quiet -f install.R; fi
 
