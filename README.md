@@ -13,7 +13,8 @@ Run a bash shell or R command line:
 
 ```
 docker run --rm -ti stnava/antsxdockergpu:latest /bin/bash
-nvidia-docker run --rm -ti stnava/antsxdockergpu:latest /bin/bash
+nvidia-docker run --rm -ti stnava/antsxdockergpu:latest /bin/bash # for GPU
+sudo docker run --gpus 0 --rm -ti docker.io/stnava/antsxdockergpu:latest /bin/bash # for GPU - sudo may not be needed
 ```
 
 Or run in RStudio instance:
@@ -21,6 +22,7 @@ Or run in RStudio instance:
 ```
 docker run -e PASSWORD=mu -p 8787:8787 stnava/antsxdockergpu:latest
 nvidia-docker run -e PASSWORD=mu -p 8787:8787 stnava/antsxdockergpu:latest
+docker run  --gpus 0 -e PASSWORD=mu -p 8787:8787 stnava/antsxdockergpu:latest
 ```
 
 Some pointers on "getting it working"
