@@ -1,4 +1,4 @@
-FROM rocker/ml:4.0.0-cuda10.2-ubuntu18.04
+FROM rocker/ml:4.0.2-cuda10.1 
 
 USER root
 COPY . ${HOME}
