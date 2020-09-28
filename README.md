@@ -23,3 +23,12 @@ docker run -e PASSWORD=mu -p 8787:8787 stnava/antsxdockergpu:latest
 nvidia-docker run -e PASSWORD=mu -p 8787:8787 stnava/antsxdockergpu:latest
 ```
 
+Some pointers on "getting it working"
+
+From: https://github.com/tensorflow/tensorflow/issues/26182
+
+```
+export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+```
+
+and please make sure you have a clean / recent install of docker and its relevant nvidia extensions https://docs.docker.com/config/containers/resource_constraints/
