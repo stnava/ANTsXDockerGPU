@@ -1,7 +1,7 @@
 An attempt at making a portable ANTsR docker app, with some
 visualization capabilities via RStudio and GPU support.
 
-Here: https://hub.docker.com/repository/docker/stnava/antsxdockergpu/builds
+Here: https://hub.docker.com/repository/docker/stnava/antsxdockergpu
 
 Based on: https://hub.docker.com/r/rocker/ml
 
