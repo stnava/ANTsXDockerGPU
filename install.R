@@ -5,6 +5,8 @@ install.packages(
     "reticulate",
     "tensorflow",
     "keras",
+    "pixmap",
+    "misc3d",
     "tfruns",
     "visreg",
     "zeallot"),
