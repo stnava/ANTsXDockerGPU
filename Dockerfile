@@ -16,7 +16,7 @@ RUN apt-get update; \
     apt-get -y upgrade
 RUN apt-get -y install cmake curl
 RUN apt-get install -y python3 python3-pip
-RUN sudo -H pip3 install setuptools virtualenv keras tensorflow antspyx
+RUN pip3 install setuptools virtualenv keras tensorflow antspyx
 ## Run an install.R script, if it exists.
 RUN if [ -f install.R ]; then R --quiet -f install.R; fi
 
@@ -90,6 +90,8 @@ RUN R CMD INSTALL ANTsR_0.5.6.5_R_x86_64-pc-linux-gnu_R4.0.tar.gz
 RUN git clone https://github.com/ANTsX/ANTsRNet.git && R CMD INSTALL ANTsRNet
 RUN git clone https://github.com/stnava/patchMatchR.git && R CMD INSTALL patchMatchR
 RUN git clone https://stnava@bitbucket.org/stnava/superblendr.git  && R CMD INSTALL superblendr
+RUN rm *tar.gz
+RUN rm -r superblendr patchMatchR ANTsRNet
 RUN chmod a+rwx *
 RUN chmod a+rwx .
 ## Become normal user again
