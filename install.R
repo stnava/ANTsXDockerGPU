@@ -8,6 +8,7 @@ install.packages(
     "pixmap",
     "misc3d",
     "tfruns",
+    "tfdatasets",
     "visreg",
     "zeallot"),
     repos = "http://cran.us.r-project.org"
